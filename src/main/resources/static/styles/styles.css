@@ -1,0 +1,24 @@
+/* Tipos de Selectores en CSS */
+
+/* Toma todos las etiquetas */
+h1{
+    /* font-size: 40px; */
+}
+
+/* Toma el id de la etiqueta */
+#titulo{
+    /* color: blue; */
+}
+
+/* Asigna estilos mediante el atributo class */
+.cambiar-color{
+    /* color: aqua; */
+}
+
+#img-title{
+    filter: invert(1) opacity(0.3);
+}
+
+.ancho-flex{
+    flex-basis: 40%;
+}
