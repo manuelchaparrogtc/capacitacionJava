@@ -13,11 +13,11 @@
     <div class="bg-dark w-100 h-100 d-flex justify-content-center align-items-center">
         <div class="gap-4 w-50 h-75 d-flex flex-column justify-content-evenly align-items-center">
             <img style="filter: invert(1)" class="h-25" src="https://th.bing.com/th/id/R.d334e18fc39188f95d0f97e93757fce6?rik=YyGh0I3ai2O7Cw&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_337531.png&ehk=vOUxpk7WqUPnWI%2ft0dfXzjVhVSJ7AwHxX3v5oPKEsZs%3d&risl=&pid=ImgRaw&r=0">
-            <form class="bg-light d-flex border rounded w-75 h-100 p-3 flex-column align-items-center gap-3 justify-content-center">
+            <form method="post" th:object="${person}" th:action="@{/login}" class="bg-light d-flex border rounded w-75 h-100 p-3 flex-column align-items-center gap-3 justify-content-center">
                 <h1 class="display-5">Login</h1>
-                <input class="form-control w-75" type="email" placeholder="Email">
-                <input class="form-control w-75" type="password" placeholder="Contraseña">
-                <a class="btn btn-primary w-50" href="/home">Ingresar</a>
+                <input th:field="*{email}" id="email" class="form-control w-75" type="email" placeholder="Email">
+                <input th:field="*{password}" id="password" class="form-control w-75" type="password" placeholder="Contraseña">
+                <button type="submit" class="btn btn-primary w-50">Iniciar</button>
                 <a class="btn btn-dark w-50" href="/createAccount">Crear Cuenta</a>
             </form>
         </div>
